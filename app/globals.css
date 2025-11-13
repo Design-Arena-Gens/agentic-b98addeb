@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0b0f;
+  --fg: #ffffffcc;
+  --blue: #2f6df6;
+  --mint: #39d0c2;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  scroll-behavior: smooth;
+}
+
+/* Fancy glow gradient for hero */
+.glow-gradient {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 70vh;
+  background: radial-gradient(40% 40% at 50% 50%, rgba(47,109,246,0.35), transparent 60%),
+              radial-gradient(30% 30% at 70% 20%, rgba(57,208,194,0.35), transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.card {
+  @apply bg-white/5 border border-white/10 rounded-2xl shadow-soft backdrop-blur-md;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-xl bg-tech-blue text-white px-6 py-3 font-medium hover:opacity-90 transition;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-xl bg-white/5 text-white px-6 py-3 font-medium hover:bg-white/10 transition;
+}
